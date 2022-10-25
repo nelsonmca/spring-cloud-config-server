@@ -1,4 +1,4 @@
-package io.nelson.nadar.configserver;
+package com.currenciesdirect.configserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

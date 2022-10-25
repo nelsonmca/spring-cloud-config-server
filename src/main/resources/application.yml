@@ -1,0 +1,28 @@
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: ${spring.cloud.eureka.cd.url:http://localhost:8761/eureka}
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          config: DEBUG
+    ROOT: INFO
+spring:
+  security:
+    user:
+      name: ${cd.config.server.username:undefined}
+      password: ${cd.config.server.password:undefined}
+  application:
+    name: configserver
+  cloud:
+    config:
+      enabled: 'false'
+      server:
+        git:
+          uri: ${cd.config.server.repo:https://repos.currenciesdirect.com:8443/scm/hyperion/config-repo.git}
+          username: ${cd.cloud.config.git.username:undefined}
+          password: ${cd.cloud.config.git.password:undefined}
+server:
+  port: ${cd.cloud.config.server.port:8888}

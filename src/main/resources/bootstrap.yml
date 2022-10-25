@@ -1,0 +1,6 @@
+encrypt:
+  key-store:
+    location: classpath:/config-server.jks
+    password: ${cd.encrypt.password:cd-k34-s3cr3t}
+    alias: config-server-key
+    secret:  ${cd.encrypt.password:cd-k34-s3cr3t}

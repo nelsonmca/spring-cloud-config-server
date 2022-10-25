@@ -1,4 +1,4 @@
-package io.nelson.nadar.configserver;
+package com.currenciesdirect.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,11 +7,11 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 public class ConfigServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConfigServerApplication.class, args);
+		SpringApplication.run(ConfigServerApplication.class);
 	}
 
 }
